@@ -1,24 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dockerでの起動方法
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Dockerを立ち上げる
+* Dockerfileがあるディレクトリで、```docker-compose up```を実行する
+* 初回のみ、下記の手順を実行
+  * 別のターミナルを起動し、```docker-compose run web rake db:create```を実行する
+  * 上記を実行後、```docker-compose run web rake db:migrate```を実行する
+* ```http://localhost:3000/```にアクセスする
